@@ -81,6 +81,7 @@ button,
 textarea,
 select {
   font: inherit;
+  color: inherit;
 }
 
 a:not(.link) {
@@ -298,6 +299,24 @@ a:not(.link) {
 
 .dot-indicators > [aria-selected="true"] {
     background-color: hsl( var(--clr-white) / 1); 
+}
+
+.numbered-indicators > *{
+  cursor: pointer;
+  display: inline-block;
+  padding: .8em;
+  border: 2px solid hsl(var(--clr-white)/ .2);
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.numbered-indicators > *:where(:hover),
+.numbered-indicators > *:where(:focus-visible){
+  border-color: hsl(var(--clr-white)/ .7);
+}
+
+.numbered-indicators > [aria-selected = "true"]{
+  border-color: hsl(var(--clr-white) / .9);
 }
 
 
